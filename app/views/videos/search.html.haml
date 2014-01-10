@@ -1,13 +1,16 @@
 %article.video_category
   %header
     %h3 Your search results:
-  - @results.each do |video|
+  .videos.row
+  - @results.each do |video|    
     .video.col-sm-2      
       = link_to video  do
         %img(src="#{video.small_image}")
+       
+  
+  
 
         
  
  
                        
-             
