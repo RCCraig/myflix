@@ -37,7 +37,7 @@ describe ReviewsController do
 
         it "sets @video" do          
           post :create, review: {rating: 4}, video_id: video.id
-          expect(assigns(:video)).to eq(:video)
+          expect(assigns(:video)).to eq(video)
         end
 
         it "sets @reviews" do          
