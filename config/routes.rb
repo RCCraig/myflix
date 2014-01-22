@@ -5,6 +5,8 @@ Myflix::Application.routes.draw do
     end
     resources :reviews, only: [:create]
   end
+
+  resources :users, only: [:show]
   resources :categories, only: [:show]
   resources :users, only: [:create]
   resources :sessions, only: [:create]
