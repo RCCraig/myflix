@@ -100,19 +100,19 @@ describe UsersController do
 
   describe "GET new_with_invitation_token" do
     it "renders the :new view template" do
-      invitation = Fabricate(:inviation)
+      invitation = Fabricate(:invitation)
       get :new_with_invitation_token, token: invitation.token
       expect(response).to render_template :new
     end
 
     it "sets @user with recipient's email" do
-      invitation = Fabricate(:inviation)
+      invitation = Fabricate(:invitation)
       get :new_with_invitation_token, token: invitation.token
       expect(assigns(:user).email).to eq(invitation.recipient_email)
     end
 
     it "sets @invitation_token" do
-      invitation = Fabricate(:inviation)
+      invitation = Fabricate(:invitation)
       get :new_with_invitation_token, token: invitation.token
       expect(assigns(:invitation_token)).to eq(invitation_token)
     end
