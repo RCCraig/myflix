@@ -1,7 +1,7 @@
 module Tokenable
   extend ActiveSupport::Concern
 
-  include do
+  included do
     before_create :generate_token
 
     def generate_token
@@ -9,4 +9,3 @@ module Tokenable
     end
   end
 end
-

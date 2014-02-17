@@ -8,6 +8,7 @@ describe InvitationsController do
       expect(assigns(:invitation)).to be_new_record
       expect(assigns(:invitation)).to be_instance_of Invitation
     end
+
     it_behaves_like "require sign in" do
       let(:action) { get :new }
     end
@@ -45,6 +46,7 @@ describe InvitationsController do
         expect(flash[:success]).to be_present
       end
     end
+    
     context "with invalid input" do
       it "renders the :new template" do
         set_current_user 
@@ -62,6 +64,12 @@ describe InvitationsController do
         set_current_user 
         post :create, invitation: {recipient_email: "joe@example.com", message: "Hey join Myflix" }
         expect(ActionMailer::Base.deliveries).to be_empty
+      end
+
+      it "sets the flash error message" do
+        set_current_user
+        post :create, invitation: {recipient_email: "joe@example.com", message: "Hey join Myflix" }
+        expect(flash[:error]).to be_present
       end      
 
       it "sets @invitation" do
