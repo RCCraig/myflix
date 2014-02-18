@@ -12,6 +12,7 @@ gem 'bootstrap_form'
 gem 'bcrypt-ruby'
 gem 'fabrication'
 gem 'faker'
+gem 'figaro'
 
 group :development do
   gem 'sqlite3'  
@@ -36,5 +37,6 @@ group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'launchy'
+  gem 'capybara-email'
 end
 

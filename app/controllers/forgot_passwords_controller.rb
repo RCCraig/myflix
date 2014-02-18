@@ -1,4 +1,5 @@
 class ForgotPasswordsController < ApplicationController
+  
   def create
     user = User.where(email: params[:email]).first
     if user
