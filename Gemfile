@@ -12,7 +12,6 @@ gem 'bootstrap_form'
 gem 'bcrypt-ruby'
 gem 'fabrication'
 gem 'faker'
-gem 'figaro'
 
 group :development do
   gem 'sqlite3'  
