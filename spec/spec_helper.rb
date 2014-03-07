@@ -7,6 +7,10 @@ require 'capybara/rails'
 require 'capybara/email/rspec'
 require 'sidekiq/testing/inline'
 require 'vcr'
+require 'capybara/poltergeist'
+
+Capybara.javascript_driver = :poltergeist
+
 
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -75,5 +79,5 @@ RSpec.configure do |config|
 
   config.after(:each) do
     DatabaseCleaner.clean
-  end
+  end   
 end

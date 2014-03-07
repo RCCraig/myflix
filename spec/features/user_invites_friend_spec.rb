@@ -9,6 +9,8 @@ feature 'User invites friend' do
     friend_accepts_invitation    
     friend_signs_in
 
+    save_screenshot('tmp/file.png')
+
     friend_should_follow(alice)
 
     inviter_should_follow_friend(alice)    
