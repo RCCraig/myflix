@@ -1,0 +1,140 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/tokens
+    body:
+      encoding: US-ASCII
+      string: card[number]=4000000000000002&card[exp_month]=3&card[exp_year]=2018&card[cvc]=314
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.10.1
+      Authorization:
+      - Bearer sk_test_wXHjXOVRvynH1l5Je59xV94F
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.10.1","lang":"ruby","lang_version":"2.0.0 p247 (2013-06-27)","platform":"i686-linux","publisher":"stripe","uname":"Linux
+        rails-dev-box 3.2.0-23-generic-pae #36-Ubuntu SMP Tue Apr 10 22:19:09 UTC
+        2012 i686 i686 i386 GNU/Linux"}'
+      Content-Length:
+      - '81'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Mar 2014 06:26:11 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '570'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Cache-Control:
+      - no-cache, no-store
+      Access-Control-Max-Age:
+      - '300'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "tok_103hOP246B16QpMhf8Gsrct0",
+          "livemode": false,
+          "created": 1395296771,
+          "used": false,
+          "object": "token",
+          "type": "card",
+          "card": {
+            "id": "card_103hOP246B16QpMhxotIvtQ1",
+            "object": "card",
+            "last4": "0002",
+            "type": "Visa",
+            "exp_month": 3,
+            "exp_year": 2018,
+            "fingerprint": "xYjydEeuF7qKfsLY",
+            "customer": null,
+            "country": "US",
+            "name": null,
+            "address_line1": null,
+            "address_line2": null,
+            "address_city": null,
+            "address_state": null,
+            "address_zip": null,
+            "address_country": null
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 20 Mar 2014 06:26:11 GMT
+- request:
+    method: post
+    uri: https://api.stripe.com/v1/customers
+    body:
+      encoding: US-ASCII
+      string: card=tok_103hOP246B16QpMhf8Gsrct0&email=isaiah.harber%40stantoncasper.biz&plan=base
+    headers:
+      Accept:
+      - '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.10.1
+      Authorization:
+      - Bearer sk_test_wXHjXOVRvynH1l5Je59xV94F
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.10.1","lang":"ruby","lang_version":"2.0.0 p247 (2013-06-27)","platform":"i686-linux","publisher":"stripe","uname":"Linux
+        rails-dev-box 3.2.0-23-generic-pae #36-Ubuntu SMP Tue Apr 10 22:19:09 UTC
+        2012 i686 i686 i386 GNU/Linux"}'
+      Content-Length:
+      - '83'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 20 Mar 2014 06:26:12 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '115'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Cache-Control:
+      - no-cache, no-store
+      Access-Control-Max-Age:
+      - '300'
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "error": {
+            "type": "invalid_request_error",
+            "message": "No such plan: base",
+            "param": "plan"
+          }
+        }
+    http_version: 
+  recorded_at: Thu, 20 Mar 2014 06:26:12 GMT
+recorded_with: VCR 2.8.0

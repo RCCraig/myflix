@@ -49,6 +49,7 @@ group :test do
   gem 'webmock', '1.11.0'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  gem 'poltergeist'
+ 
+  
 end
 
