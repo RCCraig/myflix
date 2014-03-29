@@ -31,35 +31,35 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 20 Mar 2014 06:26:16 GMT
+      - Sat, 29 Mar 2014 11:36:00 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
       - '570'
       Connection:
       - keep-alive
-      Access-Control-Max-Age:
-      - '300'
-      Access-Control-Allow-Credentials:
-      - 'true'
       Access-Control-Allow-Methods:
       - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - no-cache, no-store
+      Access-Control-Max-Age:
+      - '300'
       Strict-Transport-Security:
       - max-age=31556926; includeSubDomains
     body:
       encoding: UTF-8
       string: |
         {
-          "id": "tok_103hOP246B16QpMhwT209ZIN",
+          "id": "tok_103kqR246B16QpMh3NI9tf0y",
           "livemode": false,
-          "created": 1395296776,
+          "created": 1396092960,
           "used": false,
           "object": "token",
           "type": "card",
           "card": {
-            "id": "card_103hOP246B16QpMh0tW3VezP",
+            "id": "card_103kqR246B16QpMh4dLagsiA",
             "object": "card",
             "last4": "0002",
             "type": "Visa",
@@ -78,13 +78,13 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Thu, 20 Mar 2014 06:26:16 GMT
+  recorded_at: Sat, 29 Mar 2014 11:36:00 GMT
 - request:
     method: post
     uri: https://api.stripe.com/v1/customers
     body:
       encoding: US-ASCII
-      string: card=tok_103hOP246B16QpMhwT209ZIN&email=aunta%40mullerroberts.name&plan=base
+      string: card=tok_103kqR246B16QpMh3NI9tf0y&email=ardith%40stroman.net&plan=plan_id
     headers:
       Accept:
       - '*/*; q=0.5, application/xml'
@@ -101,40 +101,40 @@ http_interactions:
         rails-dev-box 3.2.0-23-generic-pae #36-Ubuntu SMP Tue Apr 10 22:19:09 UTC
         2012 i686 i686 i386 GNU/Linux"}'
       Content-Length:
-      - '76'
+      - '73'
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 402
+      message: Payment Required
     headers:
       Server:
       - nginx
       Date:
-      - Thu, 20 Mar 2014 06:26:17 GMT
+      - Sat, 29 Mar 2014 11:36:02 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '115'
+      - '117'
       Connection:
       - keep-alive
-      Cache-Control:
-      - no-cache, no-store
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Max-Age:
-      - '300'
       Access-Control-Allow-Methods:
       - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache, no-store
+      Access-Control-Max-Age:
+      - '300'
     body:
       encoding: UTF-8
       string: |
         {
           "error": {
-            "type": "invalid_request_error",
-            "message": "No such plan: base",
-            "param": "plan"
+            "message": "Your card was declined.",
+            "type": "card_error",
+            "code": "card_declined"
           }
         }
     http_version: 
-  recorded_at: Thu, 20 Mar 2014 06:26:17 GMT
+  recorded_at: Sat, 29 Mar 2014 11:36:02 GMT
 recorded_with: VCR 2.8.0

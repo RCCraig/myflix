@@ -31,35 +31,35 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sat, 29 Mar 2014 11:36:03 GMT
+      - Sat, 29 Mar 2014 15:16:12 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
       - '570'
       Connection:
       - keep-alive
-      Cache-Control:
-      - no-cache, no-store
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Max-Age:
-      - '300'
       Access-Control-Allow-Methods:
       - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Cache-Control:
+      - no-cache, no-store
+      Access-Control-Max-Age:
+      - '300'
       Strict-Transport-Security:
       - max-age=31556926; includeSubDomains
     body:
       encoding: UTF-8
       string: |
         {
-          "id": "tok_103kqR246B16QpMhf262UKN7",
+          "id": "tok_103ktz246B16QpMhvlgjJPk8",
           "livemode": false,
-          "created": 1396092963,
+          "created": 1396106172,
           "used": false,
           "object": "token",
           "type": "card",
           "card": {
-            "id": "card_103kqR246B16QpMhytlk7W5W",
+            "id": "card_103ktz246B16QpMhZBRnHrcg",
             "object": "card",
             "last4": "4242",
             "type": "Visa",
@@ -78,13 +78,13 @@ http_interactions:
           }
         }
     http_version: 
-  recorded_at: Sat, 29 Mar 2014 11:36:03 GMT
+  recorded_at: Sat, 29 Mar 2014 15:16:12 GMT
 - request:
     method: post
     uri: https://api.stripe.com/v1/customers
     body:
       encoding: US-ASCII
-      string: card=tok_103kqR246B16QpMhf262UKN7&email=skylar.herzog%40ryanrempel.biz&plan=plan_id
+      string: card=tok_103ktz246B16QpMhvlgjJPk8&email=justice.wehner%40gibsonkaulke.net&plan=base
     headers:
       Accept:
       - '*/*; q=0.5, application/xml'
@@ -110,21 +110,21 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Sat, 29 Mar 2014 11:36:04 GMT
+      - Sat, 29 Mar 2014 15:16:13 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '2219'
+      - '2209'
       Connection:
       - keep-alive
-      Access-Control-Allow-Methods:
-      - GET, POST, HEAD, OPTIONS, DELETE
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Cache-Control:
-      - no-cache, no-store
       Access-Control-Max-Age:
       - '300'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Cache-Control:
+      - no-cache, no-store
+      Access-Control-Allow-Credentials:
+      - 'true'
       Strict-Transport-Security:
       - max-age=31556926; includeSubDomains
     body:
@@ -132,45 +132,45 @@ http_interactions:
       string: |
         {
           "object": "customer",
-          "created": 1396092964,
-          "id": "cus_3kqRDGfQPbn6aj",
+          "created": 1396106173,
+          "id": "cus_3ktzddpuCyKNEd",
           "livemode": false,
           "description": null,
-          "email": "skylar.herzog@ryanrempel.biz",
+          "email": "justice.wehner@gibsonkaulke.net",
           "delinquent": false,
           "metadata": {},
           "subscriptions": {
             "object": "list",
             "total_count": 1,
             "has_more": false,
-            "url": "/v1/customers/cus_3kqRDGfQPbn6aj/subscriptions",
+            "url": "/v1/customers/cus_3ktzddpuCyKNEd/subscriptions",
             "data": [
               {
-                "id": "sub_3kqR0OIdFsXuDV",
+                "id": "sub_3ktzDJsooMCxPY",
                 "plan": {
                   "interval": "month",
-                  "name": "base",
-                  "created": 1396092569,
+                  "name": "base plan",
+                  "created": 1396100944,
                   "amount": 999,
                   "currency": "usd",
-                  "id": "plan_id",
+                  "id": "base",
                   "object": "plan",
                   "livemode": false,
                   "interval_count": 1,
-                  "trial_period_days": 30,
+                  "trial_period_days": null,
                   "metadata": {},
-                  "statement_description": "Myflix charge"
+                  "statement_description": "Myflix Fee"
                 },
                 "object": "subscription",
-                "start": 1396092964,
-                "status": "trialing",
-                "customer": "cus_3kqRDGfQPbn6aj",
+                "start": 1396106173,
+                "status": "active",
+                "customer": "cus_3ktzddpuCyKNEd",
                 "cancel_at_period_end": false,
-                "current_period_start": 1396092964,
-                "current_period_end": 1398684964,
+                "current_period_start": 1396106173,
+                "current_period_end": 1398784573,
                 "ended_at": null,
-                "trial_start": 1396092964,
-                "trial_end": 1398684964,
+                "trial_start": null,
+                "trial_end": null,
                 "canceled_at": null,
                 "quantity": 1,
                 "application_fee_percent": null,
@@ -186,17 +186,17 @@ http_interactions:
             "object": "list",
             "total_count": 1,
             "has_more": false,
-            "url": "/v1/customers/cus_3kqRDGfQPbn6aj/cards",
+            "url": "/v1/customers/cus_3ktzddpuCyKNEd/cards",
             "data": [
               {
-                "id": "card_103kqR246B16QpMhytlk7W5W",
+                "id": "card_103ktz246B16QpMhZBRnHrcg",
                 "object": "card",
                 "last4": "4242",
                 "type": "Visa",
                 "exp_month": 3,
                 "exp_year": 2018,
                 "fingerprint": "1yVFObGxyd7k5MW8",
-                "customer": "cus_3kqRDGfQPbn6aj",
+                "customer": "cus_3ktzddpuCyKNEd",
                 "country": "US",
                 "name": null,
                 "address_line1": null,
@@ -212,8 +212,8 @@ http_interactions:
             ],
             "count": 1
           },
-          "default_card": "card_103kqR246B16QpMhytlk7W5W"
+          "default_card": "card_103ktz246B16QpMhZBRnHrcg"
         }
     http_version: 
-  recorded_at: Sat, 29 Mar 2014 11:36:04 GMT
+  recorded_at: Sat, 29 Mar 2014 15:16:13 GMT
 recorded_with: VCR 2.8.0

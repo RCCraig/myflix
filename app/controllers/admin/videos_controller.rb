@@ -1,7 +1,6 @@
-class Admin::VideosController < ApplicationController
+class Admin::VideosController < AdminsController
   before_action :require_user
-  before_action :require_admin
-
+  
   def new
     @video = Video.new
   end
@@ -17,14 +16,7 @@ class Admin::VideosController < ApplicationController
     end
   end
 
-  private
-
-  def require_admin
-    if !current_user.admin?
-      flash[:error] = "You are not authorized to do that."
-      redirect_to home_path unless current_user.admin?
-    end
-  end
+  private  
 
   def video_params
     params.require(:video).permit(:title, :description, :category_id, :large_cover, :small_cover, :video_url)

@@ -31,7 +31,7 @@ module StripeWrapper
     attr_reader :response, :error_message
 
     def initialize(options={})
-      @response = options[response]
+      @response = options[:response]
       @error_message = options[:error_message]
     end
 
@@ -50,6 +50,10 @@ module StripeWrapper
 
     def successful?
       response.present?
+    end
+
+    def customer_token
+      response.id
     end
   end
 end
