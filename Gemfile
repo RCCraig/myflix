@@ -19,6 +19,7 @@ gem 'mini_magick'
 gem 'fog'
 gem 'figaro'
 gem 'stripe'
+gem 'stripe_event'
 gem 'draper'
 
 group :development do
@@ -49,6 +50,7 @@ group :test do
   gem 'webmock', '1.11.0'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  gem 'poltergeist'
+ 
+  
 end
 

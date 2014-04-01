@@ -8,6 +8,7 @@ Myflix::Application.routes.draw do
 
   namespace :admin do
     resources :videos, only: [:new, :create]
+    resources :payments, only: [:index]
   end
 
   resources :users, only: [:show]
@@ -36,6 +37,8 @@ Myflix::Application.routes.draw do
   get 'sign_in', to: 'sessions#new'
   get 'home', to: "videos#index"
   get 'sign_out', to: 'sessions#destroy'
+
+  mount StripeEvent::Engine => '/stripe_events'
 
   root to: 'pages#front'
 
