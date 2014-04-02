@@ -26,7 +26,8 @@ Video.create(title: "Family Guy", description: "A cartoon about a not-so normal 
 Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: File.open("public/tmp/futurama.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: comedy)
 
 
-Craig = User.create(full_name: "Craig Chambers", password: "password", email: "craig@msn.com")
+Craig = User.create(full_name: "Craig Chambers", password: "123", email: "craig@msn.com", admin: true)
+Rob = User.create(full_name: "Rob Cham", password: "999", email: "rob@example.com", admin: true)
 
 Review.create(user: Craig, video: monk, rating: 4, content: "This show is good.")
 Review.create(user: Craig, video: monk, rating: 3, content: "This show is ok.")
