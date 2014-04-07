@@ -10,7 +10,7 @@ Myflix::Application.configure do
   config.assets.compress = true
   config.assets.js_compressor = :uglifier
 
-  config.assets.compile = false
+  config.assets.compile = true
 
   config.assets.digest = true
 
@@ -30,5 +30,5 @@ Myflix::Application.configure do
   }
   ActionMailer::Base.delivery_method = :smtp
 
-  config.action_mailer.default_url_options = { host: 'tranquil-cove-7316.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'radiant-ridge-4802.herokuapp.com' }
 end
