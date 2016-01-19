@@ -11,19 +11,20 @@ animation = Category.create(name: "Animation")
 mystery = Category.create(name: "Mystery")
 
 
-Video.create(title: "Family Guy", description: "A cartoon about a not-so normal family.", small_cover: File.open("public/tmp/family_guy.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: comedy)
-Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: File.open("public/tmp/futurama.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: animation)
-Video.create(title: "Monk", description: "A quirky detective solves crimes.", small_cover: File.open("public/tmp/monk.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: mystery)
-Video.create(title: "South Park", description: "A cartoon that will knock your socks off.", small_cover: File.open("public/tmp/south_park.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: comedy)
-Video.create(title: "Family Guy", description: "A cartoon about a not-so normal family.", small_cover: File.open("public/tmp/family_guy.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: animation)
-Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: File.open("public/tmp/futurama.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: mystery)
+Video.create(title: "Family Guy", description: "A cartoon about a not-so normal family.", small_cover: "/tmp/family_guy.jpg", large_cover: "/tmp/play_screen.jpg", category: comedy)
+Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: "/tmp/futurama.jpg", large_cover: "/tmp/play_screen.jpg", category: animation)
+Video.create(title: "Monk", description: "A quirky detective solves crimes.", small_cover: "/tmp/monk.jpg", large_cover: "/tmp/play_screen.jpg", category: mystery)
+Video.create(title: "South Park", description: "A cartoon that will knock your socks off.", small_cover: "/tmp/south_park.jpg", large_cover: "/tmp/play_screen.jpg", category: comedy)
+Video.create(title: "Family Guy", description: "A cartoon about a not-so normal family.", small_cover: "/tmp/family_guy.jpg", large_cover: "/tmp/play_screen.jpg", category: animation)
+Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: "/tmp/futurama.jpg", large_cover: "/tmp/play_screen.jpg", category: mystery)
 
-Video.create(title: "Family Guy", description: "A cartoon about a not-so normal family.", small_cover: File.open("public/tmp/family_guy.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: animation)
-Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: File.open("public/tmp/futurama.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: mystery)
-monk = Video.create(title: "Monk", description: "A quirky detective solves crimes.", small_cover: File.open("public/tmp/monk.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: comedy)
-Video.create(title: "South Park", description: "A cartoon that will knock your socks off.", small_cover: File.open("public/tmp/south_park.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: animation)
-Video.create(title: "Family Guy", description: "A cartoon about a not-so normal family.", small_cover: File.open("public/tmp/family_guy.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: mystery)
-Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: File.open("public/tmp/futurama.jpg"), large_cover: File.open("public/tmp/play_screen.jpg"), category: comedy)
+Video.create(title: "Family Guy", description: "A cartoon about a not-so normal family.", small_cover: "/tmp/family_guy.jpg", large_cover: "/tmp/play_screen.jpg", category_id: comedy)
+Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: "/tmp/futurama.jpg", large_cover: "/tmp/play_screen.jpg", category_id: animation)
+monk = Video.create(title: "Monk", description: "A quirky detective solves crimes.", small_cover: "/tmp/monk.jpg", large_cover: "/tmp/play_screen.jpg", category_id: mystery)
+Video.create(title: "South Park", description: "A cartoon that will knock your socks off.", small_cover: "/tmp/south_park.jpg", large_cover: "/tmp/play_screen.jpg", category_id: comedy)
+Video.create(title: "Family Guy", description: "A cartoon about a not-so normal family.", small_cover: "/tmp/family_guy.jpg", large_cover: "/tmp/play_screen.jpg", category_id: animation)
+Video.create(title: "Futurama", description: "A cartoon based in future.", small_cover: "/tmp/futurama.jpg", large_cover: "/tmp/play_screen.jpg", category_id: mystery)
+
 
 
 Craig = User.create(full_name: "Craig Chambers", password: "123", email: "craig@msn.com", admin: true)

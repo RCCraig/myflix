@@ -13,13 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20140330060214) do
 
-  create_table "categories", force: true do |t|
+  create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "invitations", force: true do |t|
+  create_table "invitations", force: :cascade do |t|
     t.integer  "inviter_id"
     t.string   "recipient_name"
     t.string   "recipient_email"
@@ -29,13 +29,13 @@ ActiveRecord::Schema.define(version: 20140330060214) do
     t.string   "token"
   end
 
-  create_table "payments", force: true do |t|
+  create_table "payments", force: :cascade do |t|
     t.integer "user_id"
     t.integer "amount"
     t.string  "reference_id"
   end
 
-  create_table "queue_items", force: true do |t|
+  create_table "queue_items", force: :cascade do |t|
     t.integer  "video_id"
     t.integer  "user_id"
     t.integer  "position"
@@ -43,14 +43,14 @@ ActiveRecord::Schema.define(version: 20140330060214) do
     t.datetime "updated_at"
   end
 
-  create_table "relationships", force: true do |t|
+  create_table "relationships", force: :cascade do |t|
     t.integer  "leader_id"
     t.integer  "follower_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "reviews", force: true do |t|
+  create_table "reviews", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "video_id"
     t.text     "content"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20140330060214) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password_digest"
     t.string   "full_name"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(version: 20140330060214) do
     t.boolean  "active",          default: true
   end
 
-  create_table "videos", force: true do |t|
+  create_table "videos", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at"
